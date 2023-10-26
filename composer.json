@@ -1,0 +1,17 @@
+{
+    "name": "denal05/module-m-academy-customize-m2-checkout",
+    "description": "A Magento 2 module built as an exercise for the M.academy \"Customize the Magento 2 Checkout\" course by Mark Shust",
+    "require": {
+        "php": "^8.1"
+    },
+    "type": "magento2-module",
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Denal05\\MacademyCustomizeM2Checkout\\": ""
+        }
+    }
+}
