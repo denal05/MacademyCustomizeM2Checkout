@@ -13,13 +13,13 @@ class UpdateAddressSortOrder implements LayoutProcessorInterface
                  ['billing-step']['children']
                  ['payment']['children']
                  ['payments-list']['children'] as &$paymentMethod) {
-            $fields = &$paymentMethod['children']['form-fields']['children'];
-            if ($fields === null) {
+            $formFields = &$paymentMethod['children']['form-fields']['children'];
+            if ($formFields === null) {
                 continue;
             }
-            $fields['postcode']['sortOrder'] = '72';
-            $fields['city']['sortOrder'] = '74';
-            $fields['region_id']['sortOrder'] = '76';
+            $formFields['postcode']['sortOrder'] = '72';
+            $formFields['city']['sortOrder'] = '74';
+            $formFields['region_id']['sortOrder'] = '76';
         }
 
         return $jsLayout;
