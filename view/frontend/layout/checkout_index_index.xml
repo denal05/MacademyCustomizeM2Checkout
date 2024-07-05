@@ -9,6 +9,14 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
+            <!--
+              This file has been copied in its entirety from vendor/magento/module-checkout/view/frontend/layout/checkout_index_index.xml
+              and has been modified to include only the relevant nodes.
+              However, leaving the definition of <block ... name="checkout.root" ...>, as the commented-out block below,
+              would redefine the block with the name "checkout.root", and cause a blank page to be rendered on /checkout/.
+              Instead, we should simply reference the block with the name "checkout.root".
+            -->
+            <!-- block class="Magento\Checkout\Block\Onepage" name="checkout.root" template="Magento_Checkout::onepage.phtml" cacheable="false" -->
             <referenceBlock name="checkout.root">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
