@@ -3,6 +3,11 @@
     <type name="Magento\Checkout\Block\Onepage">
         <arguments>
             <argument name="layoutProcessors" xsi:type="array">
+                <!--
+                  If the item node below doesn't specify an xsi:type, PHP will throw an error:
+                    Invalid Document Element 'item': The type definition is abstract.
+                  It requires an xsi:type of "object", since we are passing a class instance.
+                -->
                 <item name="denal05_macademycustomizem2checkout_checkout_layout_processor_updateaddresssortorder"
                       xsi:type="object">Denal05\MacademyCustomizeM2Checkout\Block\Checkout\LayoutProcessor\UpdateAddressSortOrder</item>
             </argument>
