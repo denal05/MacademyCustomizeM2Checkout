@@ -15,7 +15,7 @@ define([
 
     return Component.extend({
         defaults: {
-            template: 'Denal05_MacademyCustomizeM2Checkout/email/',
+            template: 'Denal05_MacademyCustomizeM2Checkout/email',
             isVisible: ko.observable(false),
         },
         initialize: function () {
