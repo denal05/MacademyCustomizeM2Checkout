@@ -1,0 +1,33 @@
+<!--The 'step_code' value from the .js file should be used-->
+<li id="doctorsDetails" data-bind="fadeVisible: isVisible">
+
+    <1-- https://developer.adobe.com/commerce/php/tutorials/frontend/custom-checkout/add-new-step/ -->
+    <div class="doctor-s-details" data-bind="i18n: 'Step Title'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+    </div>
+
+    <!-- https://developer.adobe.com/commerce/php/tutorials/frontend/custom-checkout/add-form/ -->
+    <div>
+        <form id="doctor-s-details-checkout-form" class="form" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+            <fieldset class="fieldset">
+                <legend data-bind="i18n: 'Doctor\'s Details Checkout Form'"></legend>
+                <!-- ko foreach: getRegion('doctor-s-details-checkout-form-fields') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+                <!--/ko-->
+            </fieldset>
+            <button type="reset">
+                <span data-bind="i18n: 'Reset'"></span>
+            </button>
+        </form>
+        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <div class="primary">
+                <button data-role="opc-continue" type="submit" class="button action continue primary">
+                    <span translate="'Next'"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</li>
