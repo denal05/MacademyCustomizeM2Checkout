@@ -32,6 +32,9 @@ define([
         isVisible: ko.observable(true),
         quoteIsVirtual: quote.isVirtual(),
         initialize: function () {
+            // See https://magento.stackexchange.com/questions/155010/magento-2-move-place-order-button-from-payment-to-sidebar-on-checkout-page
+            // or  https://github.com/davidroberto/-NOT-MAINTAINED-magento2-place_order_sidebar
+
             this._super();
 
             stepNavigator.registerStep(
