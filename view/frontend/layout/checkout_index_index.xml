@@ -204,11 +204,16 @@
                                         </item>
                                     </item>
                                     <item name="sidebar" xsi:type="array">
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Denal05_MacademyCustomizeM2Checkout/sidebar</item>
+                                        </item>
                                         <item name="children" xsi:type="array">
                                             <item name="summary" xsi:type="array">
                                                 <item name="children" xsi:type="array">
                                                     <item name="discount" xsi:type="array">
                                                         <item name="component" xsi:type="string">Magento_SalesRule/js/view/payment/discount</item>
+                                                        <item name="config" xsi:type="array">
+                                                            <item name="displayArea" xsi:type="string">after-summary</item>
                                                         <item name="children" xsi:type="array">
                                                             <item name="errors" xsi:type="array">
                                                                 <item name="sortOrder" xsi:type="string">0</item>
@@ -227,6 +232,7 @@
                                                 </item>
                                             </item>
                                         </item>
+                                    </item>
                                     </item>
                                 </item>
                             </item>
