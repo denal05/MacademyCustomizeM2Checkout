@@ -163,7 +163,7 @@
                                                                         <item name="options" xsi:type="array">
                                                                             <item name="0" xsi:type="array">
                                                                                 <item name="label" xsi:type="string" translate="true">Please select value</item>
-                                                                                <item name="value" xsi:type="string"/>
+                                                                                <item name="value" xsi:type="string"></item>
                                                                             </item>
                                                                             <item name="1" xsi:type="array">
                                                                                 <item name="label" xsi:type="string" translate="true">Value 1</item>
@@ -208,12 +208,11 @@
                                             <item name="template" xsi:type="string">Denal05_MacademyCustomizeM2Checkout/sidebar</item>
                                         </item>
                                         <item name="children" xsi:type="array">
-                                            <item name="summary" xsi:type="array">
-                                                <item name="children" xsi:type="array">
-                                                    <item name="discount" xsi:type="array">
+                                            <item name="discount" xsi:type="array">
                                                         <item name="component" xsi:type="string">Magento_SalesRule/js/view/payment/discount</item>
                                                         <item name="config" xsi:type="array">
                                                             <item name="displayArea" xsi:type="string">after-summary</item>
+                                                        </item>
                                                         <item name="children" xsi:type="array">
                                                             <item name="errors" xsi:type="array">
                                                                 <item name="sortOrder" xsi:type="string">0</item>
@@ -228,11 +227,22 @@
                                                             </item>
                                                         </item>
                                                     </item>
-
+                                            <item name="summary" xsi:type="array">
+                                                <item name="children" xsi:type="array">
+                                                    <!--
+                                                    We could copy and paste the entire contents of the
+                                                    Magento_Checkout/js/view/summary/cart-items file into our own UI
+                                                    component, and then override this core component with a "map" in
+                                                    requirejs-config.js, but we'd lose maintainability if this file was
+                                                    ever updated in the core with a new release of Magento. A much less
+                                                    invasive way is to use a JavaScript Mixin.
+                                                    -->
+                                                    <item name="cart_items" xsi:type="array">
+                                                        <item name="component" xsi:type="string">Denal05_MacademyCustomizeM2Checkout/js/view/summary/cart-items</item>
+                                                    </item>
                                                 </item>
                                             </item>
                                         </item>
-                                    </item>
                                     </item>
                                 </item>
                             </item>
