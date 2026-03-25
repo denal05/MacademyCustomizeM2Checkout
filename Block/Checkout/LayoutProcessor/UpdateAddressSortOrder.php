@@ -17,8 +17,11 @@ class UpdateAddressSortOrder implements LayoutProcessorInterface
             if ($formFields === null) {
                 continue;
             }
+            // Zip/Postal Code
             $formFields['postcode']['sortOrder'] = '72';
+            // City
             $formFields['city']['sortOrder'] = '74';
+            // State/Province
             $formFields['region_id']['sortOrder'] = '76';
         }
 
