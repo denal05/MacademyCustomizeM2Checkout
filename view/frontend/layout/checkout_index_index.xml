@@ -94,6 +94,7 @@
                                                                     </item>
                                                                     <item name="telephone" xsi:type="array">
                                                                         <item name="validation" xsi:type="array">
+                                                                            <!-- The validation rule "validate-phoneStrict" comes from lib/web/mage/validation.js -->
                                                                             <item name="validate-phoneStrict" xsi:type="boolean">true</item>
                                                                         </item>
                                                                     </item>
