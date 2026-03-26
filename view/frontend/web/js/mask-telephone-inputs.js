@@ -1,7 +1,7 @@
 define([
     'domReady',
     'Magento_Ui/js/lib/view/utils/dom-observer',
-    'jQuery',
+    'jquery',
     'Denal05_MacademyCustomizeM2Checkout/js/jquery.inputmask.min'
 ], function(
     domReady,
@@ -10,7 +10,7 @@ define([
 ) {
     'use strict';
 
-    domReady( function() {
+    domReady(function() {
         domObserver.get('input[name="telephone"]', function (el) {
             $(el).inputmask("(999) 999-9999");
         });
