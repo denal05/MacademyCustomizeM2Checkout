@@ -13,4 +13,12 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="denal05_macademycustomizem2checkout_checkoutconfigprovider" xsi:type="object"
+                >Denal05\MacademyCustomizeM2Checkout\Model\CheckoutConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
