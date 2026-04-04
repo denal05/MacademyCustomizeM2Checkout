@@ -20,7 +20,7 @@ define([
             );
 
             if (attribute) {
-                shippingAddress.extension_attributes[attributeCode] = attribute.value;
+                // shippingAddress.extension_attributes[attributeCode] = attribute.value;
             }
 
             console.log('shippingAddress', shippingAddress);
