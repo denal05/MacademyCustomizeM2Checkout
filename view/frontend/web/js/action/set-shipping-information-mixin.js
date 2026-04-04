@@ -9,7 +9,7 @@ define([
 
     return function(setShippingInformationAction) {
         return wrapper.wrap(setShippingInformationAction, function(originalAction) {
-            const shippingAddress = quote.shippingAddress();
+            let shippingAddress = quote.shippingAddress();
             const attributeCode = 'address_classification';
 
             shippingAddress.customAttributes = shippingAddress.customAttributes || {};
@@ -21,6 +21,7 @@ define([
 
             if (attribute) {
                 // shippingAddress.extension_attributes[attributeCode] = attribute.value;
+                // shippingAddress.extension_attributes.address_classification = attribute.value;
             }
 
             console.log('shippingAddress', shippingAddress);
