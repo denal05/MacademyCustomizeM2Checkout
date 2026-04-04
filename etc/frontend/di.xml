@@ -10,6 +10,8 @@
                 -->
                 <item name="denal05_macademycustomizem2checkout_checkout_layout_processor_updateaddresssortorder"
                       xsi:type="object">Denal05\MacademyCustomizeM2Checkout\Block\Checkout\LayoutProcessor\UpdateAddressSortOrder</item>
+                <item name="denal05_macademycustomizem2checkout_checkout_layout_processor_addressclassificationattribute"
+                      xsi:type="object">Denal05\MacademyCustomizeM2Checkout\Block\Checkout\LayoutProcessor\AddressClassificationAttribute</item>
             </argument>
         </arguments>
     </type>
