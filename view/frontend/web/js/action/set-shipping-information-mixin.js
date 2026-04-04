@@ -20,11 +20,21 @@ define([
             );
 
             if (attribute) {
+                /*
+                    The following line, which attempts to add a key:value pair of
+                        address_classification: 0
+                    to the extension_attributes object within shippingAddress
+                    results in an HTTP 400 Bad Request error,
+                    and gives the following error message on the frontend at
+                    /checkout/#shipping upon clicking the 'Next' button:
+                        'AddressClassification' is not supported. Correct the field name and try again.
+                    Therefore, the key:value pair of
+                        address_classification: 0
+                    has been added to the window.checkoutConfig object instead.
+                 */
                 // shippingAddress.extension_attributes[attributeCode] = attribute.value;
-                // shippingAddress.extension_attributes.address_classification = attribute.value;
+                window.checkoutConfig[attributeCode] = attribute.value;
             }
-
-            console.log('shippingAddress', shippingAddress);
 
             return originalAction();
         });
