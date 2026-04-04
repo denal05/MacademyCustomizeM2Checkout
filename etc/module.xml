@@ -4,6 +4,7 @@
     <module name="Denal05_MacademyCustomizeM2Checkout">
         <sequence>
             <module name="Magento_Checkout"/>
+            <module name="Magento_Customer"/>
             <module name="MarkShust_SimpleData"/>
         </sequence>
     </module>
