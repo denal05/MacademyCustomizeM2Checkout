@@ -1,7 +1,7 @@
 let config = {
     deps: [
         'Denal05_MacademyCustomizeM2Checkout/js/mask-telephone-inputs'
-    ]
+    ],
     /*
        For extensibility, we always prefer the checkout_index_index.xml way instead of the requirejs-config.js way.
        When overriding JavaScript files with the map, we usually don’t define an extension, as it will assume .js
@@ -14,4 +14,11 @@ let config = {
     //             'Denal05_MacademyCustomizeM2Checkout/template/sidebar.html'
     //     }
     // }
+    config: {
+        mixins: {
+            'Magento_Checkout/js/action/set-shipping-information': {
+                'Denal05_MacademyCustomizeM2Checkout/js/action/set-shipping-information-mixin': true
+            }
+        }
+    }
 };
