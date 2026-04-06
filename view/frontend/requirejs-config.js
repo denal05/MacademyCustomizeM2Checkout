@@ -18,6 +18,9 @@ let config = {
         mixins: {
             'Magento_Checkout/js/action/set-shipping-information': {
                 'Denal05_MacademyCustomizeM2Checkout/js/action/set-shipping-information-mixin': true
+            },
+            'Magento_Checkout/js/view/billing-address': {
+                'Denal05_MacademyCustomizeM2Checkout/js/view/billing-address-mixin': true
             }
         }
     }
